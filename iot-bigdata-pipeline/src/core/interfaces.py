@@ -1,22 +1,23 @@
 from abc import ABC, abstractmethod
-from typing import Dict, Any, Optional
+from typing import Dict, Any
 
 class ISensor(ABC):
+    """Interface for sensors following Interface Segregation Principle"""
+    
     @abstractmethod
-    def read_data(self) -> Optional[Dict[str, Any]]:
+    def read_data(self) -> Dict[str, Any]:
         pass
 
-class IDataCollector(ABC):
+class IDataCleaner(ABC):
+    """Interface for data cleaning strategies"""
+    
     @abstractmethod
-    def collect(self) -> None:
-        pass
-
-class IDataProcessor(ABC):
-    @abstractmethod
-    def process(self, data: Dict[str, Any]) -> Dict[str, Any]:
+    def clean(self, data: Dict[str, Any]) -> Dict[str, Any]:
         pass
 
 class IDataStore(ABC):
+    """Interface for data storage following Open/Closed Principle"""
+    
     @abstractmethod
-    def save(self, data: Dict[str, Any]) -> None:
+    def save(self, data: Dict[str, Any]):
         pass
