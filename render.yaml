@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: esp32-camera-server
+    env: python
+    plan: free
+    buildCommand: "pip install -r iot-bigdata-pipeline/requirements.txt"
+    startCommand: "python iot-bigdata-pipeline/camera_server.py"

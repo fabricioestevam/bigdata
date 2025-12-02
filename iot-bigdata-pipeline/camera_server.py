@@ -278,23 +278,9 @@ def list_devices():
 
 if __name__ == '__main__':
     print("\n" + "=" * 60)
-    print("🎥 ESP32-CAM Pipeline Server - RODANDO!")
+    print("🎥 ESP32-CAM Pipeline Server - RODANDO NO RENDER!")
     print("=" * 60)
-    print("📡 POST   /camera/data    - Receber dados da câmera")
-    print("📊 GET    /camera/stats   - Estatísticas gerais")
-    print("🔍 GET    /camera/latest  - Dados mais recentes")
-    print("📋 GET    /camera/list    - Listar dispositivos")
-    print("❤️  GET    /health        - Status do servidor")
-    print("=" * 60)
-    print("🌐 Servidor: http://0.0.0.0:5000")
-    print("=" * 60)
-    print("\n⚠️  IMPORTANTE:")
-    print("   1. Certifique-se que o Arduino tem o IP correto deste computador")
-    print("   2. Descubra seu IP com: ipconfig (Windows) ou ifconfig (Linux/Mac)")
-    print("   3. O Arduino deve enviar para: http://SEU_IP:5000/camera/data")
-    print("\n💡 Para testar se está funcionando:")
-    print("   curl http://localhost:5000/health")
-    print("=" * 60 + "\n")
-    
-    # Rodar servidor
-    app.run(host='0.0.0.0', port=5000, debug=True)
+
+    PORT = int(os.environ.get("PORT", 5000))
+
+    app.run(host='0.0.0.0', port=PORT)
