@@ -6,6 +6,9 @@ ultralytics==8.1.0
 easyocr==1.7.0
 opencv-python-headless==4.8.1.78
 numpy==1.24.3
+Pillow==10.1.0
+
+# PyTorch CPU-only (sem CUDA)
+--index-url https://download.pytorch.org/whl/cpu
 torch==2.1.0
 torchvision==0.16.0
-Pillow==10.1.0
