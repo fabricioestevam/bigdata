@@ -1,14 +1,9 @@
-flask==3.0.0
-flask-cors==4.0.0
-pymongo==4.6.0
-python-dotenv==1.0.0
-ultralytics==8.1.0
-easyocr==1.7.0
-opencv-python-headless==4.8.1.78
-numpy==1.24.3
-Pillow==10.1.0
-
-# PyTorch CPU-only (sem CUDA)
---index-url https://download.pytorch.org/whl/cpu
-torch==2.1.0
-torchvision==0.16.0
+flask==2.3.3
+flask-cors
+pymongo
+python-dotenv
+opencv-python-headless
+ultralytics==8.2.0
+pytesseract
+numpy
+gunicorn
